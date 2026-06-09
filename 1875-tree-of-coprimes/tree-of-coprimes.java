@@ -17,7 +17,7 @@ class Solution {
             adj[e[1]].add(e[0]);
         }
 
-        // Stores the deepest depth for each value (1 to 50). Initialized to -1.
+        
         int[] ancestorDepth = new int[51];
         Arrays.fill(ancestorDepth, -1);
 
