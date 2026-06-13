@@ -1,0 +1,22 @@
+class Solution {
+    public String mapWordWeights(String[] words, int[] weights) {
+
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            int totalWeight = 0;
+
+            for (int i = 0;i < word.length(); i++){
+                char c = word.charAt(i);
+                totalWeight += weights[c - 'a'];
+            }
+
+            int rem = totalWeight % 26;
+            char mappedChar =(char)('z' - rem);
+
+            result.append(mappedChar);
+        }
+        return result.toString();
+        
+    }
+}
