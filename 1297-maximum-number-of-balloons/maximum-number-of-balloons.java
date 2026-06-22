@@ -1,6 +1,6 @@
 class Solution {
     public int maxNumberOfBalloons(String text) {
-        // Step 1: Count the frequencies of all lowercase letters
+        
         int[] counts = new int[26];
         for (char c : text.toCharArray()) {
             counts[c - 'a']++;
