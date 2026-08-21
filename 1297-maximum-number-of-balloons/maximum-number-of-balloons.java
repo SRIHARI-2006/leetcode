@@ -1,6 +1,5 @@
 class Solution {
     public int maxNumberOfBalloons(String text) {
-        
         int[] counts = new int[26];
         for (char c : text.toCharArray()) {
             counts[c - 'a']++;
@@ -10,8 +9,6 @@ class Solution {
         int l = counts['l' - 'a'] / 2;  
         int o = counts['o' - 'a'] / 2;  
         int n = counts['n' - 'a'];
-        
-        
         return Math.min(b, Math.min(a, Math.min(l, Math.min(o, n))));
     }
 }
